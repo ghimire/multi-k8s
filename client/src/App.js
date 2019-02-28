@@ -9,18 +9,22 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Fib Calculator</h1>
-            <Link to="/">Home</Link>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" width="50%"/>
+          <h1 className="App-title">Fib Calculator V2</h1>
+          <p>
+            <Link to="/">Home</Link>&nbsp;|&nbsp;
             <Link to="/otherpage">Other Page</Link>
-          </header>
+          </p>
+          <p>
           <div>
             <Route exact path="/" component={Fib} />
             <Route path="/otherpage" component={OtherPage} />
-          </div>
-        </div>
+          </div>               
+          </p>
+        </header>     
+      </div>
       </Router>
     );
   }
