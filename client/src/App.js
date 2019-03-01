@@ -11,8 +11,8 @@ class App extends Component {
       <Router>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" width="50%"/>
-          <h1 className="App-title">Fib Calculator V2</h1>
+          <img src={logo} className="App-logo" alt="logo"/>
+          <h3 className="App-title">Fib Calculator V3</h3>
           <p>
             <Link to="/">Home</Link>&nbsp;|&nbsp;
             <Link to="/otherpage">Other Page</Link>

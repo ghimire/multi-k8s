@@ -53,6 +53,12 @@ class Fib extends Component {
   }
 
   render() {
+    const indicesDivStyle = {
+      color: 'orange',      
+      border: '1px dotted',
+      "border-color": "#fff"
+    };
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -64,11 +70,16 @@ class Fib extends Component {
           <button>Submit</button>
         </form>
 
-        <h3>Indexes I have seen:</h3>
-        {this.renderSeenIndexes()}
+        <br/>
 
-        <h3>Calculated Values:</h3>
-        {this.renderValues()}
+        <div style={indicesDivStyle}>
+        <em>Indexes I have seen:</em><br/>
+        {this.renderSeenIndexes()}
+        </div>
+
+        <br/>
+        <em>Calculated Values:</em><br/>
+          {this.renderValues()}
       </div>
     );
   }
