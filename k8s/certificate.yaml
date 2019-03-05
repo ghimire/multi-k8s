@@ -1,0 +1,18 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: k8s-prak-us-tls
+spec:
+  secretName: k8s-prak-us
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: k8s.prak.us
+  dnsNames:
+    - k8s.prak.us
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - k8s.prak.us
