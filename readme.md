@@ -1,4 +1,4 @@
-# Kubernetes React App with Postgres and Redis
+# Kubernetes React App with Postgres and Redis [![Build Status](https://travis-ci.org/ghimire/multi-k8s.svg?branch=master)](https://travis-ci.org/ghimire/multi-k8s)
 
 ## Running
 - Install Docker
