@@ -17,8 +17,5 @@
 - Get and visit the IP: `$ minikube ip`
 - Voila!
 
-## Storage Class
-This project uses Digital Oean specific storageClass in `k8s/database-persistent-volume-claim.yaml`. Modify this to use your provider specific persistent volume.
-
 ## Cleaning up
 - `$ kubectl delete -f k8s`
