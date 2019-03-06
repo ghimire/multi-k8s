@@ -1,4 +1,4 @@
-# Kubernetes React App with Postgres and Redis [![Build Status](https://travis-ci.org/ghimire/multi-k8s.svg?branch=master)](https://travis-ci.org/ghimire/multi-k8s)
+# Kubernetes React App with Postgres and Redis (with Minikube)
 
 ## Running
 - Install Docker
@@ -11,7 +11,7 @@
   2. `$ minikube config set vm-driver hyperkit`
 - Start minikube: `$ minikube start`
 - Apply the mandatory command with: `$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml`
-- Add secrets for postgres: `$ kubectl create secret generic --from-literal PGPASSWORD=chang3@m3!`
+- Add secrets for postgres: `$ kubectl create secret pgpassword --from-literal PGPASSWORD=chang3@m3!`
 - `$ minikube addons enable ingress`
 - Apply the configs: `$ kubectl apply -f k8s`
 - Get and visit the IP: `$ minikube ip`
