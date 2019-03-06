@@ -8,9 +8,3 @@ docker push ghimire/multi-worker:latest
 docker push ghimire/multi-client:$SHA
 docker push ghimire/multi-server:$SHA
 docker push ghimire/multi-worker:$SHA
-
-#@todo: Find a way to do this with digitalocean
-#kubectl apply -f k8s
-#kubectl set image deployments/server-deployment server=ghimire/multi-server:$SHA
-#kubectl set image deployments/client-deployment client=ghimire/multi-client:$SHA
-#kubectl set image deployments/worker-deployment worker=ghimire/multi-worker:$SHA
