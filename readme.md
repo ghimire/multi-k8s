@@ -1,9 +1,11 @@
 # Kubernetes React App with Postgres and Redis (with Minikube)
 
 ## Running
-- Install Docker
-- Build each images as `multi-server`, `multi-worker`, `multi-client` and push to Docker Hub, and change the image names in `k8s` directory appropriately
-  Eg: `cd worker && docker build -t ghimire/multi-worker . && docker push ghimire/multi-worker`
+- Install Docker Desktop
+- Build each images and push to Docker Hub
+1. docker build -t ghimire/multi-client -f ./client/Dockerfile ./client
+2. docker build -t ghimire/multi-server -f ./server/Dockerfile ./server
+3. docker build -t ghimire/multi-worker -f ./worker/Dockerfile ./worker
 - Install minikube: `$ brew install minikube`.
   Optionally, install hyperkit driver and run minikube with it.
   1. `$ curl -LO https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-hyperkit \
