@@ -18,7 +18,11 @@ Run the above set of gcloud commands and verify the context is set to GKE with `
 - `$ kubectl create secret generic pgpassword —from-literal PGPASSWORD=chang3m3!`
 
 ## Install Helm
-- `curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash`
+- `$ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash`
+- `$ kubectl -n kube-system create serviceaccount tiller`
+- `$ kubectl create clusterrolebinding tiller-cluster-role --clusterrole cluster-admin --serviceaccount=kube-system:tiller`
+- `$ helm init --service-account tiller -—upgrade`
+- `$ helm repo update`
 
 ## Install nginx-ingress controller
 - `$ helm install stable/nginx-ingress --name my-lb --set rbac.create=true`
