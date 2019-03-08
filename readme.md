@@ -15,8 +15,8 @@
 - `$ brew install kubernetes-helm`
 - `$ kubectl -n kube-system create serviceaccount tiller`
 - `$ kubectl create clusterrolebinding tiller-cluster-role --clusterrole cluster-admin --serviceaccount=kube-system:tiller`
-- `$ helm --kubeconfig /Users/prak/.kube/do.yaml init --service-account tiller —upgrade`
-- `$ helm --kubeconfig /Users/prak/.kube/do.yaml repo update`
+- `$ helm --kubeconfig $HOME/.kube/do.yaml init --service-account tiller -—upgrade`
+- `$ helm --kubeconfig $HOME/.kube/do.yaml repo update`
 
 ## Install nginx-ingress controller
 - `$ helm install stable/nginx-ingress --name my-nginx --set rbac.create=true`
