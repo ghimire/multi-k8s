@@ -7,12 +7,12 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: k8s.prak.us
+  commonName: ae67c9fd6419211e981a006550be8f1f-592979440.eu-west-2.elb.amazonaws.com
   dnsNames:
-    - k8s.prak.us
+    - ae67c9fd6419211e981a006550be8f1f-592979440.eu-west-2.elb.amazonaws.com
   acme:
     config:
       - http01:
           ingressClass: nginx
         domains:
-          - k8s.prak.us
+          - ae67c9fd6419211e981a006550be8f1f-592979440.eu-west-2.elb.amazonaws.com

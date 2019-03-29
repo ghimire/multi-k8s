@@ -10,10 +10,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - k8s.prak.us
+        - ae67c9fd6419211e981a006550be8f1f-592979440.eu-west-2.elb.amazonaws.com
       secretName: k8s-prak-us
   rules:
-    - host: k8s.prak.us
+    - host: ae67c9fd6419211e981a006550be8f1f-592979440.eu-west-2.elb.amazonaws.com
       http:
         paths:
           - path: /?(.*)
